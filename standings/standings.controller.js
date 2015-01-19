@@ -20,7 +20,7 @@
 
 		function getdriverStandings(){			
 			return ErgastService.driverStandings()
-				.then(function(response){					
+				.then(function(response){						
 					vm.standings = response;
 					return vm.standings;				
 				})
