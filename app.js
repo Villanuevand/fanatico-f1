@@ -20,6 +20,14 @@
 			templateUrl : 'standings/standings.html',
 			controller : 'StandingsController',
 			controllerAs : 'list'
+		})
+		.when('/calendar',{
+			templateUrl : 'raceschedule/raceschedule.html',
+			controller : 'RaceScheduleController',
+			controllerAs : 'race'
+		})
+		.otherwise({
+			redirecTo : '/'
 		});		
 	}
 
