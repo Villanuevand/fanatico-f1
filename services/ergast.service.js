@@ -6,7 +6,7 @@
 		.service('ErgastService', Ergast)
 		.constant('URLS', {
 			'DRIVER_STANDINGS' : 'http://ergast.com/api/f1/2014/driverStandings.json',
-			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2015.json',
+			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2014.json',
 			'TEAMS_INFORMATION' : 'http://ergast.com/api/f1/2014/constructors.json'
 		});
 
