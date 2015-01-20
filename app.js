@@ -26,6 +26,11 @@
 			controller : 'RaceScheduleController',
 			controllerAs : 'race'
 		})
+		.when('/teams',{
+			templateUrl	: 'teams/teams.html',
+			controller : 'TeamsController',
+			controllerAs : 'team'
+		})
 		.otherwise({
 			redirecTo : '/'
 		});		
