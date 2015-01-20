@@ -1,0 +1,24 @@
+<a href="#/" title="Back to Home">Back</a>
+<br>
+<table>
+	<thead>
+		<tr>
+			<th>Season</th>
+			<th>Round</th>
+			<th>Name</th>
+			<th>Circuit</th>
+			<th>Location</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+	<tbody>as
+		<tr data-ng-repeat="item in race.schedule">
+			<td>{{item.season}} 1sa</td>
+			<td>{{item.round}}</td>
+			<td>{{item.raceName}}</td>
+			<td>{{item.Circuit.circuitName}}</td>
+			<td>{{item.Circuit.Location.locality}}, {{item.Circuit.Location.country}} <img data-ng-src="images/flags/{{item.Circuit.Location.country}}.png" alt="" width="30"></td>			
+			<td>{{item.date}}</td>
+		</tr>
+	</tbody>
+</table>

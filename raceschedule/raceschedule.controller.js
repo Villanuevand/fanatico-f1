@@ -22,7 +22,7 @@
 				.then(function(response){					
 					vm.schedule = response;
 					return vm.schedule;
-				})
+				});
 		}
 	}
 })();
