@@ -22,7 +22,7 @@
 			controllerAs : 'list'
 		})
 		.when('/calendar',{
-			templateUrl : 'raceschedule/raceschedule.html',
+			templateUrl : 'raceschedule/calendar.html',
 			controller : 'RaceScheduleController',
 			controllerAs : 'race'
 		})
