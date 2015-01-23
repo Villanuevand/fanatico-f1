@@ -11,9 +11,9 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr data-ng-repeat="item in list.standings">
+		<tr data-ng-repeat="item in list.standings">			
 			<td>{{item.position}}</td>
-			<td>{{item.Driver.givenName}} {{item.Driver.familyName}}</td>
+			<td><a data-ng-href="#/result/races/{{item.Driver.driverId}}">{{item.Driver.givenName}} {{item.Driver.familyName}}</a></td>
 			<td>{{item.Constructors[0].name}}</td>
 			<td>{{item.points}}</td>
 			<td>{{item.wins}}</td>
