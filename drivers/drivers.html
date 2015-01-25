@@ -1,0 +1,21 @@
+<h2>Drivers</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Number</th>
+			<th>Name</th>
+			<th>Nationality</th>
+			<th>Born</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-ng-repeat="driver in driver.currentData | orderBy:'permanentNumber'">
+			<td>{{driver.permanentNumber}}</td>
+			<td><a href="/driver/{{driver.driverId}}">{{driver.givenName}} {{driver.familyName}}</a></td>
+			<td>
+				<img data-ng-src="images/flags/nationality-{{driver.nationality}}.png" width="30" alt="{{driver.nationality}}">
+			</td>
+			<td>{{driver.dateOfBirth}}</td>		
+		</tr>
+	</tbody>
+</table>
