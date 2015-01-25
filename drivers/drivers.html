@@ -11,7 +11,7 @@
 	<tbody>
 		<tr data-ng-repeat="driver in driver.currentData | orderBy:'permanentNumber'">
 			<td>{{driver.permanentNumber}}</td>
-			<td><a href="/driver/{{driver.driverId}}">{{driver.givenName}} {{driver.familyName}}</a></td>
+			<td><a data-ng-href="#/driver/{{driver.driverId}}">{{driver.givenName}} {{driver.familyName}}</a></td>
 			<td>
 				<img data-ng-src="images/flags/nationality-{{driver.nationality}}.png" width="30" alt="{{driver.nationality}}">
 			</td>
