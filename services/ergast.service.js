@@ -5,9 +5,11 @@
 		.module('f1App')
 		.service('ErgastService', Ergast)
 		.constant('URLS', {
-			'DRIVER_STANDINGS' : 'http://ergast.com/api/f1/2014/driverStandings.json',
+			'DRIVER_STANDINGS' : 'http://ergast.com/api/f1/current/driverStandings.json',
 			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2014.json',
-			'TEAMS_INFORMATION' : 'http://ergast.com/api/f1/2014/constructors.json'
+			'TEAMS_INFORMATION' : 'http://ergast.com/api/f1/2014/constructors.json',
+			'NEXT_RACE_INFO' : 'http://ergast.com/api/f1/current/next.json',
+			'LAST_RACE_INFO' : 'http://ergast.com/api/f1/current/last/results.json'
 		});
 
 	Ergast.$injector = ['$http','$log','URLS'];	
@@ -42,7 +44,27 @@
 			return request.then(function(response){				
 				return response.data.MRData.ConstructorTable.Constructors;
 			});
-		}
+		};
+		// Next Race
+		this.getNextRace = function(){
+			var request = $http({
+				method : 'GET',
+				url : URLS.NEXT_RACE_INFO
+			});
+			return request.then(function(response){
+				return response.data.MRData.RaceTable.Races[0];
+			});
+		};
+		//Last Race
+		this.getLastRace = function(){
+			var request = $http({
+				method : 'GET',
+				url : URLS.LAST_RACE_INFO
+			});
+			return request.then(function(response){				
+				return response.data.MRData.RaceTable.Races[0];
+			});
+		};
 	}
 
 
