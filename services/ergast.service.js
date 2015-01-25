@@ -5,6 +5,7 @@
 		.module('f1App')
 		.service('ErgastService', Ergast)
 		.constant('URLS', {
+			'DRIVERS_CURRENT' : 'http://ergast.com/api/f1/current/drivers.json',
 			'DRIVER_STANDINGS' : 'http://ergast.com/api/f1/current/driverStandings.json',
 			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2014.json',
 			'TEAMS_INFORMATION' : 'http://ergast.com/api/f1/2014/constructors.json',
@@ -63,6 +64,16 @@
 			});
 			return request.then(function(response){				
 				return response.data.MRData.RaceTable.Races[0];
+			});
+		};
+		// Drivers
+		this.getAllDrivers = function(){
+			var request = $http({
+				method : 'GET',
+				url : URLS.DRIVERS_CURRENT
+			});
+			return request.then(function(response){				
+				return response.data.MRData.DriverTable.Drivers;
 			});
 		};
 	}
