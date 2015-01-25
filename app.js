@@ -36,9 +36,9 @@
 			controller : 'DriversController',
 			controllerAs : 'driver'
 		})
-		.when('/driver/:driverId',{
-			templateUrl : 'drivers/driver.detail.html',
-			controller : 'DriversController',
+		.when('/drivers/:driverId',{
+			templateUrl : 'drivers/driverDetail.html',
+			controller : 'driverDetailController',
 			controllerAs : 'driver'
 		})
 		.otherwise({
