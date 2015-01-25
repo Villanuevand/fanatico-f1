@@ -1,1 +1,10 @@
-<h2>carrera anterior</h2>
+<div>
+	<h2>Carrera Anterior</h2>
+	<h4>{{info.lastRace.raceName}}</h4>	
+	<ul>
+		<li>{{info.lastRace.Results[0].position}} - {{info.lastRace.Results[0].Driver.givenName}} {{info.lastRace.Results[0].Driver.familyName}} - {{info.lastRace.Results[0].Constructor.name}}</li>
+		<li>{{info.lastRace.Results[1].position}} - {{info.lastRace.Results[1].Driver.givenName}} {{info.lastRace.Results[1].Driver.familyName}} - {{info.lastRace.Results[1].Constructor.name}}</li>
+		<li>{{info.lastRace.Results[2].position}} - {{info.lastRace.Results[2].Driver.givenName}} {{info.lastRace.Results[2].Driver.familyName}} - {{info.lastRace.Results[2].Constructor.name}}</li>
+	</ul>
+	<img alt="{{info.lastRace.raceName}}" data-ng-src="images/circuits/thumbnail/{{info.lastRace.Circuit.circuitId}}.jpg">	
+</div>
