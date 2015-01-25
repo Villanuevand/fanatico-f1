@@ -6,6 +6,7 @@
 		.service('ErgastService', Ergast)
 		.constant('URLS', {
 			'DRIVERS_CURRENT' : 'http://ergast.com/api/f1/current/drivers.json',
+			'DRIVER_INFO' : 'http://ergast.com/api/f1/current/drivers/',
 			'DRIVER_STANDINGS' : 'http://ergast.com/api/f1/current/driverStandings.json',
 			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2014.json',
 			'TEAMS_INFORMATION' : 'http://ergast.com/api/f1/2014/constructors.json',
@@ -76,6 +77,16 @@
 				return response.data.MRData.DriverTable.Drivers;
 			});
 		};
+		// Driver Detail
+		this.getDriverDetail = function(id){
+			var request = $http({
+				method : 'GET',
+				url : URLS.DRIVER_INFO + id +'.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.DriverTable.Drivers[0];
+			});
+		}
 	}
 
 
