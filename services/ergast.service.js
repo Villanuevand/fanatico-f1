@@ -39,8 +39,7 @@
 				method : 'GET',
 				url : URLS.TEAMS_INFORMATION
 			});
-			return request.then(function(response){
-				$log.info(response.data.MRData.ConstructorTable.Constructors);
+			return request.then(function(response){				
 				return response.data.MRData.ConstructorTable.Constructors;
 			});
 		}
