@@ -8,7 +8,9 @@
 	function nextRace(){
 		var directive = {
 			restrict : 'E',
-			templateUrl : 'home/nextRace.html'
+			templateUrl : 'home/nextRace.html',
+			controller : 'HomeController',
+			controllerAs : 'info'
 		};
 		return directive;
 	}
