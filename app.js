@@ -31,6 +31,11 @@
 			controller : 'TeamsController',
 			controllerAs : 'team'
 		})
+		.when('/drivers',{
+			templateUrl : 'drivers/drivers.html',
+			controller : 'DriversController',
+			controllerAs : 'driver'
+		})
 		.otherwise({
 			redirecTo : '/'
 		});		
