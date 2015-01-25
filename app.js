@@ -36,6 +36,11 @@
 			controller : 'DriversController',
 			controllerAs : 'driver'
 		})
+		.when('/driver/:driverId',{
+			templateUrl : 'drivers/driver.detail.html',
+			controller : 'DriversController',
+			controllerAs : 'driver'
+		})
 		.otherwise({
 			redirecTo : '/'
 		});		
