@@ -86,7 +86,7 @@
 			return request.then(function(response){
 				return response.data.MRData.DriverTable.Drivers[0];
 			});
-		}
+		};
 	}
 
 
