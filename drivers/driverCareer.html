@@ -1,0 +1,6 @@
+<h2>Driver Standings</h2>
+<p>Seasons: <span data-ng-repeat="seasons in info.allData.seasons">{{seasons.season}} - </span></p>
+<p>Driver Championships: <span data-ng-repeat="titles in info.allData.titles">{{titles.season}} - </span></p>
+<p>Constructors:  <span data-ng-repeat="constructor in info.allData.constructors">{{constructor.name}},</span></p>
+<p>Wins: {{info.allData.wins}}</p>
+<p>Pole Positions: {{info.allData.pole}}</p>
