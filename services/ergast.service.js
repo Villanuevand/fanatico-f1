@@ -87,6 +87,56 @@
 				return response.data.MRData.DriverTable.Drivers[0];
 			});
 		};
+		// Driver Championships
+		this.getDriverTitles = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/driverStandings/1/seasons.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.SeasonTable.Seasons;
+			});
+		};
+		// Driver Wins
+		this.getDriverWins = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/results/1.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.RaceTable.Races.length;
+			});
+		};
+		// Driver Pole Positions
+		this.getDriverPolePositions = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/results/1/qualifying.json'					   
+			});
+			return request.then(function(response){
+				return response.data.MRData.RaceTable.Races.length;
+			});
+		};		
+		// Driver Costructor
+		this.getDriverConstructors = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/constructors.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.ConstructorTable.Constructors;
+			});
+		};
+		// Driver Seasons
+		this.getDriverSeasons = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/seasons.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.SeasonTable.Seasons;
+			});
+		};
 	}
 
 
