@@ -22,7 +22,6 @@
 			if(vm.driverId){
 				ErgastService.getDriverDetail(vm.driverId)
 					.then(function(response){
-						$log.info(response);
 						vm.detailInfo = response;
 						return vm.detailInfo;
 					});		
