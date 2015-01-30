@@ -47,6 +47,57 @@
 				return response.data.MRData.ConstructorTable.Constructors;
 			});
 		};
+		// Especific Team by Id
+		this.getTeam = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/2014/constructors/'+id+'.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.ConstructorTable.Constructors;
+			})
+		};
+		// Team Drivers
+		this.getTeamDrivers = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/current/constructors/'+id+'/drivers.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.DriverTable.Drivers;
+			})
+		};
+		// Team Titles
+		this.getTeamTitles = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/constructors/'+id+'/constructorStandings/1/seasons.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.SeasonTable.Seasons;
+			})
+		};
+		// Team Wins
+		this.getTeamWins = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/constructors/'+id+'/results/1.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.RaceTable.Races;
+			})
+		};
+		// Team Seasons
+		this.getTeamSeasons = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/constructors/'+id+'/seasons.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.SeasonTable.Seasons;
+			})
+		};		
+		
 		// Next Race
 		this.getNextRace = function(){
 			var request = $http({
