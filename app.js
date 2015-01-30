@@ -31,6 +31,11 @@
 			controller : 'TeamsController',
 			controllerAs : 'team'
 		})
+		.when('/teams/:constructorId',{
+			templateUrl : 'teams/teamDetail.html',
+			controller : 'TeamDetailController',
+			controllerAs : 'team'
+		})
 		.when('/drivers',{
 			templateUrl : 'drivers/drivers.html',
 			controller : 'DriversController',
