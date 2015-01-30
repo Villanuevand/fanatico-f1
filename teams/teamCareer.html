@@ -1,0 +1,9 @@
+{{teamLog.constructorData.drivers}}
+<br>
+<p>World Titles: {{teamLog.constructorData.titles.length}}</p>
+<br>
+<p>Wins: {{teamLog.constructorData.wins.length}}</p>
+<br>
+<ul>
+	<li data-ng-repeat="item in teamLog.constructorData.seasons">{{item.season}}</li>
+</ul>
