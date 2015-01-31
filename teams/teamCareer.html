@@ -1,9 +1,14 @@
-{{teamLog.constructorData.drivers}}
+<table>
+	<tr>
+		<td data-ng-repeat="item in teamLog.constructorData.drivers">
+			<img src="images/drivers/{{item.familyName}}.jpg" alt="{{item.familyName}}">
+			<p>{{item.givenName}} {{item.familyName}}</p>
+		</td>
+	</tr>
+</table>
 <br>
 <p>World Titles: {{teamLog.constructorData.titles.length}}</p>
-<br>
 <p>Wins: {{teamLog.constructorData.wins.length}}</p>
-<br>
 <ul>
 	<li data-ng-repeat="item in teamLog.constructorData.seasons">{{item.season}}</li>
 </ul>
