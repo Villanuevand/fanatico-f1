@@ -188,6 +188,16 @@
 				return response.data.MRData.SeasonTable.Seasons;
 			});
 		};
+		// Driver Overview
+		this.getDriverOverview = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/2014/drivers/'+id+'/results.json'
+			});
+			return request.then(function(response){
+				return response.data.MRData.RaceTable.Races;
+			});
+		};
 	}
 
 
