@@ -152,20 +152,20 @@
 		this.getDriverWins = function(id){
 			var request = $http({
 				method : 'GET',
-				url : 'http://ergast.com/api/f1/drivers/'+id+'/results/1.json'
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/results/1.json?limit=100'
 			});
 			return request.then(function(response){
-				return response.data.MRData.RaceTable.Races.length;
+				return response.data.MRData.total;
 			});
 		};
 		// Driver Pole Positions
 		this.getDriverPolePositions = function(id){
 			var request = $http({
 				method : 'GET',
-				url : 'http://ergast.com/api/f1/drivers/'+id+'/results/1/qualifying.json'					   
+				url : 'http://ergast.com/api/f1/drivers/'+id+'/grid/1/qualifying.json?limit=100'					   
 			});
 			return request.then(function(response){
-				return response.data.MRData.RaceTable.Races.length;
+				return response.data.MRData.total;
 			});
 		};		
 		// Driver Costructor
