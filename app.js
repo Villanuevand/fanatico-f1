@@ -3,7 +3,8 @@
 	'use strict';
 	angular
 		.module('f1App',[
-			'ngRoute'
+			'ngRoute',
+			'app.filters'
 		])
 		.config(config);
 
