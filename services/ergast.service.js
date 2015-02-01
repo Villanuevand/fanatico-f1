@@ -8,7 +8,7 @@
 			'DRIVERS_CURRENT' : 'http://ergast.com/api/f1/current/drivers.json',
 			'DRIVER_INFO' : 'http://ergast.com/api/f1/current/drivers/',
 			'DRIVER_STANDINGS' : 'http://ergast.com/api/f1/current/driverStandings.json',
-			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2014.json',
+			'RACE_SCHEDULE' : 'http://ergast.com/api/f1/2015.json',
 			'TEAMS_INFORMATION' : 'http://ergast.com/api/f1/2014/constructors.json',
 			'NEXT_RACE_INFO' : 'http://ergast.com/api/f1/current/next.json',
 			'LAST_RACE_INFO' : 'http://ergast.com/api/f1/current/last/results.json'
