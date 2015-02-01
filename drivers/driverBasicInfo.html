@@ -3,7 +3,7 @@
 	{{driver.detailInfo.familyName}} 	
 </h3>
 <img data-ng-src="images/drivers/{{driver.detailInfo.familyName}}.jpg" alt="{{driver.detailInfo.familyName}}">
-<p>Nationality: {{driver.detailInfo.nationality}} 
+<p>Nationality: {{driver.detailInfo.nationality | driverNationality}} 
 	<img width="30" data-ng-src="images/flags/nationality-{{driver.detailInfo.nationality}}.png" alt="{{driver.detailInfo.givenName}} 
 	{{driver.detailInfo.familyName}}  {{driver.detailInfo.nationality}}">
 </p>
