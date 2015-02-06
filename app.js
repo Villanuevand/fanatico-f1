@@ -27,6 +27,11 @@
 			controller : 'RaceScheduleController',
 			controllerAs : 'race'
 		})
+		.when('/circuit/:circuitId',{
+			templateUrl : 'raceschedule/circuit.html',
+			controller : 'CircuitController',
+			controllerAs : 'circuit'
+		})
 		.when('/teams',{
 			templateUrl	: 'teams/teams.html',
 			controller : 'TeamsController',
