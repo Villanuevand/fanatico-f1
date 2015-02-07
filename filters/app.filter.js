@@ -5,7 +5,8 @@
 		.filter('country',country)
 		.filter('driverNationality',driverNationality)
 		.filter('constructorNationality',constructorNationality)
-		.filter('grandPrixTranslation', grandPrixTranslation);	
+		.filter('grandPrixTranslation', grandPrixTranslation)
+		.filter('grandPrixDate',grandPrixDate);
 
 	// Country
 	function country(){
@@ -125,7 +126,6 @@
 			}
 		}
 	};
-
 	// Constructor Nationality
 	function constructorNationality(){
 		return function(item){
@@ -160,7 +160,6 @@
 			}
 		}
 	};
-
 	// Grand Prix Translation
 	function grandPrixTranslation(){
 		return function(item){
@@ -225,6 +224,13 @@
 					return item;
 					break;
 			}
+		}
+	}
+	// Grand Prix Date
+	function grandPrixDate(){
+		return function(item){
+			var date = item.split('-');
+			return date[2]+'-'+date[1]+'-'+date[0];
 		}
 	}
 })();
