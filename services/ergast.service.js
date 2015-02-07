@@ -33,8 +33,18 @@
 				method : 'GET',
 				url : URLS.RACE_SCHEDULE
 			});
-			return request.then(function(response){					
+			return request.then(function(response){						
 				return response.data.MRData.RaceTable.Races;
+			});
+		};
+		// Race Information
+		this.raceInformation = function(id){
+			var request = $http({
+				method : 'GET',
+				url : 'http://ergast.com/api/f1/2015/'+id+'.json'
+			});
+			return request.then(function(response){				
+				return response.data.MRData.RaceTable.Races[0];
 			});
 		};
 		// Teams 
