@@ -8,7 +8,20 @@
 	function CircuitController($log, $routeParams, ErgastService){
 		var vm = this;
 		vm.circuitId = $routeParams.circuitId;
+		vm.roundId = $routeParams.roundId;
 
-		
+		execute();
+
+		function execute(){
+			getCircuitInformation();			
+		}
+
+		function getCircuitInformation(){
+			ErgastService.raceInformation(vm.roundId)
+				.then(function(response){
+					$log.info(response);
+					vm.response = response;
+				});
+		}
 	}
 })();

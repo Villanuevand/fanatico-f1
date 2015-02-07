@@ -1,11 +1,11 @@
 <a data-ng-href="#/" title="Back to Home">Back</a>
 <br>
 <div class="carrera" data-ng-repeat="item in race.schedule">
-	<h2><a data-ng-href="#/circuit/{{item.Circuit.circuitId}}" title="{{item.raceName}}">{{item.raceName | grandPrixTranslation}}</a></h2>	
+	<h2><a data-ng-href="#/circuit/{{item.Circuit.circuitId}}/{{item.round}}" title="{{item.raceName}}">{{item.raceName | grandPrixTranslation}}</a></h2>	
 	<p>
 		{{item.Circuit.Location.locality}}, 
 		{{item.Circuit.Location.country | country}} 
-		<img data-ng-src="images/flags/{{item.Circuit.Location.country}}.png" alt="" width="30"> - <small>{{item.date}}</small>		
+		<img data-ng-src="images/flags/{{item.Circuit.Location.country}}.png" alt="" width="30">  <small>{{item.date | grandPrixDate}}</small>		
 	</p>
 	<img data-ng-src="images/circuits/thumbnail/{{item.Circuit.circuitId}}.jpg" alt="{{item.raceName}} view">
 	<hr>
