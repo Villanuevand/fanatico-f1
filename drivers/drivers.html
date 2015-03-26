@@ -1,21 +1,17 @@
 <h2>Drivers</h2>
-<table>
-	<thead>
-		<tr>
-			<th>Number</th>
-			<th>Name</th>
-			<th>Nationality</th>
-			<th>Born</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr data-ng-repeat="driver in driver.currentData | orderBy:'permanentNumber'">
-			<td>{{driver.permanentNumber}}</td>
-			<td><a data-ng-href="#/drivers/{{driver.driverId}}">{{driver.givenName}} {{driver.familyName}}</a></td>
-			<td>
-				<img data-ng-src="images/flags/nationality-{{driver.nationality}}.png" width="30" alt="{{driver.nationality}}">
-			</td>
-			<td>{{driver.dateOfBirth}}</td>		
-		</tr>
-	</tbody>
-</table>
+<hr>
+
+<div class="row" >
+  <div class="col-sm-6 col-md-4 " data-ng-repeat="driver in driver.currentData | orderBy:'permanentNumber'">
+    <div class="thumbnail">    	
+      <div class="caption">
+        <h3 class="text-center">
+        	<a data-ng-href="#/drivers/{{driver.driverId}}"  class="" title="{{driver.givenName}} {{driver.familyName}}">
+        		{{driver.givenName}} {{driver.familyName}}         		
+        	</a>
+        	<img data-ng-style="display:inline-block" data-ng-src="images/flags/nationality-{{driver.nationality}}.png" width="30" alt="{{driver.nationality | filter:nacionalidad}}">
+        </h3>        		
+      </div>
+    </div>
+  </div>
+</div>
