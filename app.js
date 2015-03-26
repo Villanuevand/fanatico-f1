@@ -17,37 +17,37 @@
 			controller : 'HomeController',
 			controllerAs : 'home'
 		})
-		.when('/standings',{
+		.when('/estadisticas',{
 			templateUrl : 'standings/standings.html',
 			controller : 'StandingsController',
 			controllerAs : 'list'
 		})
-		.when('/calendar',{
+		.when('/calendario',{
 			templateUrl : 'raceschedule/calendar.html',
 			controller : 'RaceScheduleController',
 			controllerAs : 'race'
 		})
-		.when('/circuit/:circuitId/:roundId',{
+		.when('/circuito/:circuitId/:roundId',{
 			templateUrl : 'raceschedule/circuit.html',
 			controller : 'CircuitController',
 			controllerAs : 'info'
 		})
-		.when('/teams',{
+		.when('/equipos',{
 			templateUrl	: 'teams/teams.html',
 			controller : 'TeamsController',
 			controllerAs : 'team'
 		})
-		.when('/teams/:constructorId',{
+		.when('/equipos/:constructorId',{
 			templateUrl : 'teams/teamDetail.html',
 			controller : 'TeamDetailController',
 			controllerAs : 'team'
 		})
-		.when('/drivers',{
+		.when('/pilotos',{
 			templateUrl : 'drivers/drivers.html',
 			controller : 'DriversController',
 			controllerAs : 'driver'
 		})
-		.when('/drivers/:driverId',{
+		.when('/pilotos/:driverId',{
 			templateUrl : 'drivers/driverDetail.html',
 			controller : 'driverDetailController',
 			controllerAs : 'driver'

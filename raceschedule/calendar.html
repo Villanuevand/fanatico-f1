@@ -1,4 +1,5 @@
-<a data-ng-href="#/" title="Back to Home">Back</a>
+<h2>Calendario</h2>
+<hr>
 <br>
 <div class="carrera" data-ng-repeat="item in race.schedule">
 	<h2><a data-ng-href="#/circuit/{{item.Circuit.circuitId}}/{{item.round}}" title="{{item.raceName}}">{{item.raceName | grandPrixTranslation}}</a></h2>	
