@@ -1,11 +1,19 @@
-<h3>
-	{{driver.detailInfo.givenName}} 
-	{{driver.detailInfo.familyName}} 	
-</h3>
-<img data-ng-src="images/drivers/{{driver.detailInfo.familyName}}.jpg" alt="{{driver.detailInfo.familyName}}">
-<p>Nationality: {{driver.detailInfo.nationality | driverNationality}} 
-	<img width="30" data-ng-src="images/flags/nationality-{{driver.detailInfo.nationality}}.png" alt="{{driver.detailInfo.givenName}} 
+<h2>Pilotos</h2>
+<hr>
+<div class="row">
+    <div class="col-xs-12 col-md-3">
+        <a href="" class="thumbnail">
+            <img data-ng-src="images/drivers/{{driver.detailInfo.familyName}}.jpg" alt="{{driver.detailInfo.familyName}}">
+        </a>
+    </div>
+    <div class="col-xs-12 col-md-9">
+        <h3>Nombre: {{driver.detailInfo.givenName}}
+            {{driver.detailInfo.familyName}}  </h3>
+        <h4>Nacionalidad: {{driver.detailInfo.nationality | driverNationality}}
+            <img width="30" data-ng-src="images/flags/nationality-{{driver.detailInfo.nationality}}.png" alt="{{driver.detailInfo.givenName}}
 	{{driver.detailInfo.familyName}}  {{driver.detailInfo.nationality}}">
-</p>
-<p>Born: {{driver.detailInfo.dateOfBirth}}</p>
-<p>Number: {{driver.detailInfo.permanentNumber}}</p>
+        </h4>
+        <h4>Fecha de Nacimiento: {{driver.detailInfo.dateOfBirth}}</h4>
+        <h4>Número: {{driver.detailInfo.permanentNumber}}</h4>
+    </div>
+</div>
