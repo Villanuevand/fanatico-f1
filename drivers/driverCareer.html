@@ -4,8 +4,8 @@
         <p><strong>Temporadas:</strong> <span data-ng-repeat="seasons in info.allData.seasons">{{seasons.season}} - </span></p>
         <p><strong>Campeonatos de Pilotos:</strong> <span data-ng-repeat="titles in info.allData.titles">{{titles.season}} - </span></p>
         <p><strong>Constructores:</strong>  <span data-ng-repeat="constructor in info.allData.constructors">{{constructor.name}},</span></p>
-        <p><strong>Victorias:</strong> {{info.allData.wins}}</p>
-        <p><strong>Pole Positions:</strong> {{info.allData.pole}}</p>
+        <p><strong>Victorias:</strong> <span class="badge">{{info.allData.wins}}</span></p>
+        <p><strong>Pole Positions:</strong> <span class="badge">{{info.allData.pole}}</span></p>
     </div>
 </div>
 
