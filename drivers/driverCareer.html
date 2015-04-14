@@ -1,7 +1,11 @@
-<a class="btn btn-primary" href="#">Estadísticas de por vida</a>
+<div class="panel panel-primary">
+    <div class="panel-heading">Estadísticas de por vida</div>
+    <div class="panel-body">
+        <p><strong>Temporadas:</strong> <span data-ng-repeat="seasons in info.allData.seasons">{{seasons.season}} - </span></p>
+        <p><strong>Campeonatos de Pilotos:</strong> <span data-ng-repeat="titles in info.allData.titles">{{titles.season}} - </span></p>
+        <p><strong>Constructores:</strong>  <span data-ng-repeat="constructor in info.allData.constructors">{{constructor.name}},</span></p>
+        <p><strong>Victorias:</strong> {{info.allData.wins}}</p>
+        <p><strong>Pole Positions:</strong> {{info.allData.pole}}</p>
+    </div>
+</div>
 
-<p>Seasons: <span data-ng-repeat="seasons in info.allData.seasons">{{seasons.season}} - </span></p>
-<p>Driver Championships: <span data-ng-repeat="titles in info.allData.titles">{{titles.season}} - </span></p>
-<p>Constructors:  <span data-ng-repeat="constructor in info.allData.constructors">{{constructor.name}},</span></p>
-<p>Wins: {{info.allData.wins}}</p>
-<p>Pole Positions: {{info.allData.pole}}</p>
