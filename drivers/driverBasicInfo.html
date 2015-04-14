@@ -1,6 +1,9 @@
 <h2>Pilotos</h2>
-<hr>
+<a href="#/pilotos" title="Volver al listado de pilotos"  class="btn btn-primary btn-xs">Volver al listado de pilotos</a>
+<hr/>
+
 <div class="row">
+
     <div class="col-xs-12 col-md-3">
         <a href="" class="thumbnail">
             <img data-ng-src="images/drivers/{{driver.detailInfo.familyName}}.jpg" alt="{{driver.detailInfo.familyName}}">
@@ -13,7 +16,7 @@
             <img width="30" data-ng-src="images/flags/nationality-{{driver.detailInfo.nationality}}.png" alt="{{driver.detailInfo.givenName}}
 	{{driver.detailInfo.familyName}}  {{driver.detailInfo.nationality}}">
         </h4>
-        <h4>Fecha de Nacimiento: {{driver.detailInfo.dateOfBirth}}</h4>
+        <h4>Fecha de Nacimiento: {{driver.detailInfo.dateOfBirth | date : 'dd/MM/yyyy'}}</h4>
         <h4>Número: {{driver.detailInfo.permanentNumber}}</h4>
     </div>
 </div>
