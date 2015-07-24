@@ -7,7 +7,12 @@
 - Calendarios
 - Estadísticas
 
+
+Puedes ver los resultados en [www.andresvillanueva.com.ve/fanatico-f1/](http://andresvillanueva.com.ve/fanatico-f1/).
+
 Fué realizada con el único propósito de conocer y comprender el framework [AngularJS](https://angularjs.org/)
+
+**Sientente libre de contribuir!**
 
 ####Licencia
 MIT 
