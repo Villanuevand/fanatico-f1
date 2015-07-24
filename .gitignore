@@ -20,3 +20,5 @@ libpeerconnection.log
 npm-debug.log
 /tmp/
 /scripts/bower/bower-*
+# Webstorm file
+/.idea/
