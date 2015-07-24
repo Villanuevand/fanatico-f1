@@ -4,9 +4,9 @@
 		angular
 			.module('f1App')
 			.controller('DriverCareerController',DriverCareer);
-	DriverCareer.$injector = ['$log','$routeParams','ErgastService'];
+	DriverCareer.$injector = ['$log','$stateParams','ErgastService'];
 
-	function DriverCareer($log, $routeParams, ErgastService){
+	function DriverCareer($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.allData = {};
 		vm.driverId = null;
@@ -15,10 +15,10 @@
 
 		function execute(){
 			getAllData();
-		};
+		}
 
 		function getAllData(){
-			vm.driverId = $routeParams.driverId;
+			vm.driverId = $stateParams.driverId;
 			ErgastService.getDriverTitles(vm.driverId)
 				.then(function(response){					
 					vm.allData.titles = response;

@@ -4,9 +4,9 @@
 		angular
 			.module('f1App')
 			.controller('DriverBasicInfoController',DriverDetail);
-	DriverDetail.$injector = ['$log', '$routeParams','ErgastService'];
+	DriverDetail.$injector = ['$log', '$stateParams','ErgastService'];
 
-	function DriverDetail($log, $routeParams, ErgastService){
+	function DriverDetail($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.detailInfo = null;
 		vm.driverId = null;
@@ -15,10 +15,10 @@
 
 		function execute(){
 			getDriverDetail();
-		};
+		}
 
 		function getDriverDetail(){
-			vm.driverId = $routeParams.driverId;
+			vm.driverId = $stateParams.driverId;
 			if(vm.driverId){
 				ErgastService.getDriverDetail(vm.driverId)
 					.then(function(response){

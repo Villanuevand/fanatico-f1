@@ -4,8 +4,8 @@
 		.module('f1App')
 		.controller('teamCareerController', TeamCareer);
 
-	TeamCareer.$injector = ['$log','$routeParams', 'ErgastService'];
-	function TeamCareer($log,$routeParams, ErgastService){
+	TeamCareer.$injector = ['$log','$stateParams', 'ErgastService'];
+	function TeamCareer($log,$stateParams, ErgastService){
 		var vm = this;
 		vm.constructorData = {};
 		
@@ -16,7 +16,7 @@
 		}
 
 		function getAllData(){
-			vm.constructorId = $routeParams.constructorId;
+			vm.constructorId = $stateParams.constructorId;
 			ErgastService.getTeamDrivers(vm.constructorId)
 				.then(function(response){
 					vm.constructorData.drivers = response;

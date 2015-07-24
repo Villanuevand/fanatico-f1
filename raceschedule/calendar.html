@@ -1,8 +1,7 @@
 <h2>Calendario</h2>
 <hr>
-<br>
 <div class="carrera" data-ng-repeat="item in race.schedule">
-	<h2><a data-ng-href="#/circuit/{{item.Circuit.circuitId}}/{{item.round}}" title="{{item.raceName}}">{{item.raceName | grandPrixTranslation}}</a></h2>	
+	<h2><a data-ui-sref="calendarioDetalle({circuitId: item.Circuit.circuitId, roundId: item.round})" title="{{item.raceName}}">{{item.raceName | grandPrixTranslation}}</a></h2>
 	<p>
 		{{item.Circuit.Location.locality}}, 
 		{{item.Circuit.Location.country | country}} 

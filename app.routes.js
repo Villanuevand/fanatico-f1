@@ -7,52 +7,59 @@
         .module('f1App')
         .config(configRoutes);
 
-    configRoutes.$injector = ['$routeProvider'];
+    configRoutes.$injector = ['$stateProvider', '$urlRouterProvider','$locationProvider'];
 
-    function configRoutes($routeProvider){
-        $routeProvider
-            .when('/',{
+    function configRoutes($stateProvider,$urlRouterProvider,$locationProvider){
+        $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
+        $stateProvider
+            .state('home',{
+                url : '/',
                 templateUrl : 'home/home.html',
                 controller : 'HomeController',
                 controllerAs : 'home'
             })
-            .when('/estadisticas',{
+                .state('estadisticas',{
+                url : '/estadisticas',
                 templateUrl : 'standings/standings.html',
                 controller : 'StandingsController',
                 controllerAs : 'list'
             })
-            .when('/calendario',{
+            .state('calendario',{
+                url : '/calendario',
                 templateUrl : 'raceschedule/calendar.html',
                 controller : 'RaceScheduleController',
                 controllerAs : 'race'
             })
-            .when('/circuito/:circuitId/:roundId',{
+            .state('calendarioDetalle',{
+                url :'/circuito/:circuitId/:roundId',
                 templateUrl : 'raceschedule/circuit.html',
                 controller : 'CircuitController',
                 controllerAs : 'info'
             })
-            .when('/equipos',{
+            .state('equipos',{
+                url : '/equipos',
                 templateUrl	: 'teams/teams.html',
                 controller : 'TeamsController',
                 controllerAs : 'team'
             })
-            .when('/equipos/:constructorId',{
+            .state('equipoDetalle',{
+                url : '/equipo/:constructorId',
                 templateUrl : 'teams/teamDetail.html',
                 controller : 'TeamDetailController',
                 controllerAs : 'team'
             })
-            .when('/pilotos',{
+            .state('pilotos',{
+                url : '/pilotos',
                 templateUrl : 'drivers/drivers.html',
                 controller : 'DriversController',
                 controllerAs : 'driver'
             })
-            .when('/pilotos/:driverId',{
+            .state('pilotosDetalle',{
+                url : '/pilotos/:driverId',
                 templateUrl : 'drivers/driverDetail.html',
                 controller : 'driverDetailController',
                 controllerAs : 'driver'
-            })
-            .otherwise({
-                redirecTo : '/'
             });
     }
 

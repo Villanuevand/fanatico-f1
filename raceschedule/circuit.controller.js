@@ -4,11 +4,11 @@
 		.module('f1App')
 		.controller('CircuitController',CircuitController);
 
-	CircuitController.$injector = ['$log','$routeParams','ErgastService'];
-	function CircuitController($log, $routeParams, ErgastService){
+	CircuitController.$injector = ['$log','$stateParams','ErgastService'];
+	function CircuitController($log, $stateParams, ErgastService){
 		var vm = this;
-		vm.circuitId = $routeParams.circuitId;
-		vm.roundId = $routeParams.roundId;
+		vm.circuitId = $stateParams.circuitId;
+		vm.roundId = $stateParams.roundId;
 
 		execute();
 

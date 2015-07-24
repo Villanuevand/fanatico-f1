@@ -3,7 +3,7 @@
 	'use strict';
 	angular
 		.module('f1App',[
-			'ngRoute',
-			'app.filters'
+            'ui.router',
+            'app.filters'
 		]);
 })();

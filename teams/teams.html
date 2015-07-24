@@ -10,7 +10,7 @@
 	</thead>
 	<tbody>
 		<tr data-ng-repeat="item in team.information">
-			<td><a data-ng-href="#/teams/{{item.constructorId}}">{{item.name}}</a></td>
+			<td><a data-ui-sref="equipoDetalle({constructorId: item.constructorId})">{{item.name}}</a></td>
 			<td>{{item.nationality | constructorNationality}} </td>
 			<td><img width="30" alt="{{item.name}}" data-ng-src="images/flags/nationality-{{item.nationality}}.png"></td>
 		</tr>
