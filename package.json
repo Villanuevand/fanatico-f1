@@ -2,7 +2,6 @@
   "name": "fanatico-f1",
   "version": "0.0.1",
   "description": "Fanatico F1 es una aplicación para ver los resultados de la Formula 1.",
-  "main": "app.js",
   "scripts": {
     "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
