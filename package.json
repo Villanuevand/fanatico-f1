@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Fanatico F1 es una aplicación para ver los resultados de la Formula 1.",
   "scripts": {
-    "start": "live-server",
+    "start": "live-server --port=3000 --host=localhost",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
