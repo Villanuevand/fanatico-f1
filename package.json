@@ -1,0 +1,23 @@
+{
+  "name": "fanatico-f1",
+  "version": "0.0.1",
+  "description": "Fanatico F1 es una aplicación para ver los resultados de la Formula 1.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Villanuevand/fanatico-f1.git"
+  },
+  "keywords": [
+    "angularjs",
+    "formula1"
+  ],
+  "author": "Andrés Villanueva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Villanuevand/fanatico-f1/issues"
+  },
+  "homepage": "https://github.com/Villanuevand/fanatico-f1#readme"
+}
