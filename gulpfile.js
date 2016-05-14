@@ -16,7 +16,7 @@ gulp.task('browser-sync', function () {
 
 // Js Bundle
 gulp.task('bundleJS', function () {
-    return gulp.src('./fanatico-f1/**/*')
+    return gulp.src('./src/*')
         .pipe(sourcemaps.init())
         .pipe(concat('fanaticof1.min.js'))
         .pipe(uglify())
