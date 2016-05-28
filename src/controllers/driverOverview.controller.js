@@ -4,7 +4,8 @@
 		.module('f1App')
 		.controller('DriverOverviewController',DriverOverview);
 
-	DriverOverview.$injector = ['$log','$stateParams','ErgastService'];
+	/* @ngInject */
+	DriverOverview.$inject = ['$log','$stateParams','ErgastService'];
 	function DriverOverview($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.dataOverview = null;

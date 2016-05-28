@@ -3,7 +3,7 @@
 	angular
 		.module('f1App')
 		.directive('teamCareer',TeamCareer);
-
+	/* @ngInject */
 	function TeamCareer(){
 		var directive = {
 			restrict : 'E',

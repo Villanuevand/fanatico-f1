@@ -5,10 +5,11 @@
 		.module('f1App')
 		.directive('driverCareer',driverCareer);
 
+	/* @ngInject */
 	function driverCareer(){
 		var directive = {
 			restrict : 'E',
-			templateUrl : 'drivers/driverCareer.html',
+			templateUrl : './drivers/driverCareer.html',
 			controller : 'DriverCareerController',
 			controllerAs : 'info'				
 		};

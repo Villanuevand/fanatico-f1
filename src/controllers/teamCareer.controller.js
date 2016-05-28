@@ -4,8 +4,8 @@
 		.module('f1App')
 		.controller('teamCareerController', TeamCareer);
 
-	TeamCareer.$injector = ['$log','$stateParams', 'ErgastService'];
 	/* @ngInject */
+	TeamCareer.$inject = ['$log','$stateParams', 'ErgastService'];
 	function TeamCareer($log,$stateParams, ErgastService){
 		var vm = this;
 		vm.constructorData = {};

@@ -14,8 +14,8 @@
 			'LAST_RACE_INFO' : 'http://ergast.com/api/f1/current/last/results.json'
 		});
 
-	Ergast.$injector = ['$http','$log','URLS'];	
-
+	/* @ngInject */
+	Ergast.$inject = ['$http','$log','URLS'];
 	function Ergast($http, $log, URLS){
 		// Driver Standings
 		this.driverStandings = function(){			

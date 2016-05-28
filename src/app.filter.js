@@ -9,6 +9,7 @@
 		.filter('grandPrixDate',grandPrixDate);
 
 	// Country
+	/* @ngInject */
 	function country(){
 		return function(item){
 			switch(item){
@@ -76,8 +77,9 @@
 					return item;
 			}
 		}
-	};
+	}
 	//Nationality Filter
+	/* @ngInject */
 	function driverNationality(){
 		return function(item){
 			switch(item){
@@ -125,8 +127,9 @@
 					break;
 			}
 		}
-	};
+	}
 	// Constructor Nationality
+	/* @ngInject */
 	function constructorNationality(){
 		return function(item){
 			switch(item){
@@ -159,8 +162,9 @@
 					break;	
 			}
 		}
-	};
+	}
 	// Grand Prix Translation
+	/* @ngInject */
 	function grandPrixTranslation(){
 		return function(item){
 			switch(item){
@@ -227,6 +231,7 @@
 		}
 	}
 	// Grand Prix Date
+	/* @ngInject */
 	function grandPrixDate(){
 		return function(item){
 			var date = item.split('-');

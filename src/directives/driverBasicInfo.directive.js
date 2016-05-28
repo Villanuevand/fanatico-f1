@@ -5,6 +5,7 @@
 		.module('f1App')
 		.directive('driverInfo',driverBasicInfo);
 
+	/* @ngInject */
 	function driverBasicInfo(){
 		var directive = {
 			restrict : 'E',

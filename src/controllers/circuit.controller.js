@@ -4,7 +4,8 @@
 		.module('f1App')
 		.controller('CircuitController',CircuitController);
 
-	CircuitController.$injector = ['$log','$stateParams','ErgastService'];
+	/* @ngInject */
+	CircuitController.$inject = ['$log','$stateParams','ErgastService'];
 	function CircuitController($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.circuitId = $stateParams.circuitId;

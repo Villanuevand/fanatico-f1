@@ -7,8 +7,8 @@
         .module('f1App')
         .config(configRoutes);
 
-    configRoutes.$injector = ['$stateProvider', '$urlRouterProvider','$locationProvider'];
-
+    /* @ngInject */
+    configRoutes.$inject = ['$stateProvider', '$urlRouterProvider','$locationProvider'];
     function configRoutes($stateProvider,$urlRouterProvider,$locationProvider){
         $urlRouterProvider.otherwise('/');
         //$locationProvider.html5Mode(true);

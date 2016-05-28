@@ -4,8 +4,8 @@
 		.module('f1App')
 		.controller('StandingsController',Home);
 
-	Home.$injector = ['$q', '$log', 'ErgastService'];
 	/* @ngInject */
+	Home.$inject = ['$q', '$log', 'ErgastService'];
 	function Home($q, $log, ErgastService){
 		var defer = $q.defer();
 		var vm = this;

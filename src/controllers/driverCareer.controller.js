@@ -4,8 +4,9 @@
 		angular
 			.module('f1App')
 			.controller('DriverCareerController',DriverCareer);
-	DriverCareer.$injector = ['$log','$stateParams','ErgastService'];
 
+	/* @ngInject */
+	DriverCareer.$inject = ['$log','$stateParams','ErgastService'];
 	function DriverCareer($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.allData = {};

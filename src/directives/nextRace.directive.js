@@ -4,7 +4,7 @@
 	angular
 		.module('f1App')
 		.directive('nextRace',nextRace);
-
+	/* @ngInject */
 	function nextRace(){
 		var directive = {
 			restrict : 'E',

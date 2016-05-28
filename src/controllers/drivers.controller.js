@@ -4,8 +4,9 @@
 	angular
 		.module('f1App')
 		.controller('DriversController',Drivers);
-	Drivers.$injector = ['$log', 'ErgastService'];
 
+	/* @ngInject */
+	Drivers.$inject = ['$log', 'ErgastService'];
 	function Drivers($log, ErgastService){
 		var vm = this; 
 		vm.currentData = null;

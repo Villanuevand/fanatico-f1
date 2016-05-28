@@ -4,8 +4,9 @@
 		angular
 			.module('f1App')
 			.controller('DriverBasicInfoController',DriverDetail);
-	DriverDetail.$injector = ['$log', '$stateParams','ErgastService'];
 
+	/* @ngInject */
+	DriverDetail.$inject = ['$log', '$stateParams','ErgastService'];
 	function DriverDetail($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.detailInfo = null;

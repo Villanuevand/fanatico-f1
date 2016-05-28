@@ -5,8 +5,8 @@
 		.module('f1App')
 		.controller('RaceScheduleController',RaceSchedule);
 
-	RaceSchedule.$injector = ['$q', '$log', 'ErgastService'];
 	/* @ngInject */
+	RaceSchedule.$inject = ['$q', '$log', 'ErgastService'];
 	function RaceSchedule($q, $log, ErgastService){
 		var vm = this;
 			vm.title = 'Race Schedule';

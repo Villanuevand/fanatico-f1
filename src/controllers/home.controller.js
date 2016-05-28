@@ -4,8 +4,9 @@
 	angular
 		.module('f1App')
 		.controller('HomeController',Home);
-	Home.$injector = ['$log','ErgastService'];
+
 	/* @ngInject */
+	Home.$inject = ['$log','ErgastService'];
 	function Home($log, ErgastService){
 		var vm = this;
 		vm.title = 'Home App';
@@ -34,9 +35,6 @@
 					return vm.nextRace;
 				});
 		};
-
-
-
 
 	}
 })();
