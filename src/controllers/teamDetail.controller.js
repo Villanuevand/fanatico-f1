@@ -5,6 +5,7 @@
 		.controller('TeamDetailController',TeamDetail);
 	
 	TeamDetail.$injector = ['$log', '$stateParams','ErgastService'];
+	/* @ngInject */
 	function TeamDetail($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.title = 'Teams Detail';

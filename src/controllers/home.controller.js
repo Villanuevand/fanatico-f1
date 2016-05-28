@@ -4,7 +4,8 @@
 	angular
 		.module('f1App')
 		.controller('HomeController',Home);
-	Home.$injector = ['$log','ErgastService'];		
+	Home.$injector = ['$log','ErgastService'];
+	/* @ngInject */
 	function Home($log, ErgastService){
 		var vm = this;
 		vm.title = 'Home App';

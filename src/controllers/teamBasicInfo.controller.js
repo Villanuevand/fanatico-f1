@@ -5,6 +5,7 @@
 		.controller('TeamBasicInfoController',TeamBasicInfo);
 
 	TeamBasicInfo.$injector = ['$log', '$stateParams', 'ErgastService'];
+	/* @ngInject */
 	function TeamBasicInfo($log, $stateParams, ErgastService){
 		var vm = this;
 		vm.constructorData = null;

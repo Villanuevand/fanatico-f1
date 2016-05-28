@@ -6,6 +6,7 @@
 		.controller('TeamsController',Teams);
 
 	Teams.$injector = ['$log','ErgastService'];
+	/* @ngInject */
 	function Teams($log, ErgastService){
 		var vm = this;
 			vm.title = 'Teams';

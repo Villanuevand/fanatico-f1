@@ -6,6 +6,7 @@
 		.controller('RaceScheduleController',RaceSchedule);
 
 	RaceSchedule.$injector = ['$q', '$log', 'ErgastService'];
+	/* @ngInject */
 	function RaceSchedule($q, $log, ErgastService){
 		var vm = this;
 			vm.title = 'Race Schedule';
