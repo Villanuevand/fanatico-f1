@@ -4,7 +4,8 @@ var gulp    = require('gulp'),
     uglify  = require('gulp-uglify'),
     browsersync = require('browser-sync').create(),
     sourcemaps = require('gulp-sourcemaps'),
-    ngAnnotate = require('gulp-ng-annotate');
+    ngAnnotate = require('gulp-ng-annotate'),
+    del        = require('del'); //rm -rf
 
 // Browser Sync
 gulp.task('browser-sync', function () {
@@ -14,9 +15,12 @@ gulp.task('browser-sync', function () {
        }
     });
 });
-
+// Delete folder
+gulp.task('delete', function () {
+    return del(['dist'])
+});
 // Js Bundle
-gulp.task('bundleJS', function () {
+gulp.task('bundleJS',['delete'], function () {
     var app = './src/app.js',
         routes = './src/app.routes.js',
         filter = './src/app.filter.js',
@@ -34,6 +38,6 @@ gulp.task('bundleJS', function () {
         .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('build',['browser-sync','bundleJS']);
-gulp.task('default', ['build']);
+gulp.task('build',['delete','bundleJS']);
+gulp.task('default', ['build','browser-sync']);
 
