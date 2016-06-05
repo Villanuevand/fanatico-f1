@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Fanatico F1 es una aplicación para ver los resultados de la Formula 1.",
   "scripts": {
-    "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-ng-annotate": "^2.0.0",
